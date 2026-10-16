@@ -3,7 +3,6 @@ gfxoffsety=0
 frames=1
 framestyle=1
 height=32
-gfxsplitheight=0
 health=2
 fireballdmg=1
 jumpdmg=1

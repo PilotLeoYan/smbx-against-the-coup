@@ -1,6 +1,5 @@
 gfxheight=42
 gfxoffsety=10
-gfxsplitheight=168
 frames=4
 framespeed=2
 height=32
@@ -11,3 +10,4 @@ npcblock=0
 npcblock1=0
 nohurt=1
 scripts=Fly plattform
+framestyle=1

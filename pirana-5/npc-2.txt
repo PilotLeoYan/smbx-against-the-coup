@@ -2,7 +2,6 @@ gfxheight=48
 frames=5
 framestyle=1
 height=32
-gfxsplitheight=480
 health=2
 fireballdmg=1
 jumpdmg=1

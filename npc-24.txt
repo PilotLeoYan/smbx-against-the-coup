@@ -1,1 +1,1 @@
-gfxsplitheight=128
+framestyle=1

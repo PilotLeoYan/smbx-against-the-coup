@@ -1,2 +1,1 @@
-gfxsplitheight=128
 brightness=78
