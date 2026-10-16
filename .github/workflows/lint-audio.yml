@@ -35,7 +35,7 @@ jobs:
                       forbidden_found.append(p)
                   elif ext in allowed_audio_exts:
                       valid_audio_count += 1
-                  elif ext in {".lvl", ".wld", ".wls", ".txt", ".ini"}:
+                  elif ext in {".lvl", ".lvlx", ".wld", ".wldx", ".wls", ".txt", ".ini"}:
                       text = open(p, "rb").read().decode("utf-8", errors="replace")
                       for idx, line in enumerate(text.splitlines(), 1):
                           unq = urllib.parse.unquote(line)
