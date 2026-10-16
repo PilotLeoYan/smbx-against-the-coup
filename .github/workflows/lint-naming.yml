@@ -19,7 +19,6 @@ jobs:
           import os, re, sys
 
           pattern = re.compile(r"^[a-z0-9_.-]+$")
-          exempt = {"readme.md"}
           violations = []
 
           for root, dirs, files in os.walk("."):
@@ -29,8 +28,6 @@ jobs:
                   if not pattern.match(d):
                       violations.append(f"Directory: {os.path.join(root, d)}")
               for f in files:
-                  if f.lower() in exempt and re.match(r"^[A-Za-z0-9_.-]+$", f):
-                      continue
                   if not pattern.match(f):
                       violations.append(f"File: {os.path.join(root, f)}")
 

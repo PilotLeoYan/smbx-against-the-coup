@@ -16,28 +16,50 @@ jobs:
       - name: Reject legacy audio formats (.wav, .mp3, .flac, .m4a)
         run: |
           python3 -c '
-          import os, sys
+          import os, sys, re, urllib.parse, base64
 
           forbidden_exts = {".wav", ".mp3", ".flac", ".m4a"}
           allowed_audio_exts = {".ogg", ".mid"}
           forbidden_found = []
+          broken_refs = []
           valid_audio_count = 0
+          ref_re = re.compile(r"[\w\-\./\\]+\.(wav|mp3|flac|m4a)", re.I)
 
           for root, dirs, files in os.walk("."):
               if ".git" in dirs:
                   dirs.remove(".git")
               for f in files:
                   ext = os.path.splitext(f)[1].lower()
+                  p = os.path.join(root, f)
                   if ext in forbidden_exts:
-                      forbidden_found.append(os.path.join(root, f))
+                      forbidden_found.append(p)
                   elif ext in allowed_audio_exts:
                       valid_audio_count += 1
+                  elif ext in {".lvl", ".wld", ".wls", ".txt", ".ini"}:
+                      text = open(p, "rb").read().decode("utf-8", errors="replace")
+                      for idx, line in enumerate(text.splitlines(), 1):
+                          unq = urllib.parse.unquote(line)
+                          for m in ref_re.finditer(unq):
+                              broken_refs.append(f"{p}:{idx} -> {m.group(0)}")
+                          if line.startswith(("SU|", "Su|", "GSU|", "GSu|")):
+                              parts = line.split("|")
+                              if len(parts) > 2 and parts[2]:
+                                  b64 = parts[2].strip()
+                                  pad = (-len(b64)) % 4
+                                  scr = base64.b64decode(b64 + "=" * pad).decode("utf-8", errors="replace")
+                                  for m in ref_re.finditer(scr):
+                                      broken_refs.append(f"{p}:{idx} (script) -> {m.group(0)}")
 
-          if forbidden_found:
-              print("Forbidden audio files detected (only .ogg and .mid are permitted):")
-              for item in sorted(forbidden_found):
-                  print(f"  - {item}")
+          if forbidden_found or broken_refs:
+              if forbidden_found:
+                  print("Forbidden audio files detected (only .ogg and .mid are permitted):")
+                  for item in sorted(forbidden_found):
+                      print(f"  - {item}")
+              if broken_refs:
+                  print("Legacy audio references detected inside level/config files:")
+                  for item in sorted(broken_refs):
+                      print(f"  - {item}")
               sys.exit(1)
 
-          print(f"Audio check passed: {valid_audio_count} permitted audio files (.ogg/.mid), 0 forbidden files.")
+          print(f"Audio check passed: {valid_audio_count} permitted audio files (.ogg/.mid), 0 forbidden files or references.")
           '
