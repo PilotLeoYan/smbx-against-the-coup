@@ -1,0 +1,3 @@
+health=1
+iceballdmg=1
+noiceball=0

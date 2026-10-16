@@ -1,0 +1,3 @@
+spinjumphurt=1
+noiceball=0
+sworddmg=0

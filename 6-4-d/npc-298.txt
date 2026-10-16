@@ -1,0 +1,2 @@
+brightness=78
+wingsforever=1

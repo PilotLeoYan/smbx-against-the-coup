@@ -1,0 +1,9 @@
+gfxheight=64
+frames=2
+framestyle=1
+width=64
+height=64
+playerblocktop=0
+nogravity=1
+jumphurt=1
+spinjump=1

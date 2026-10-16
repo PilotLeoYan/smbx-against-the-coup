@@ -1,0 +1,10 @@
+; Moondust Project (PGE) & TheXTech Episode Configuration
+[project]
+title = "Against the Coup"
+original_title = "Contra el golpe de estado"
+authors = "Danyex, Sinber"
+engine = "thextech"
+config_pack = "SMBX-1.3"
+world_file = "world.wld"
+intro_level = "marios_pad.lvl"
+format = "SMBX-38A / SMBX-64"

@@ -1,0 +1,2 @@
+shelldmg=1
+iceballdmg=1

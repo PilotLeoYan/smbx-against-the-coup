@@ -1,0 +1,2 @@
+gfxsplitheight=288
+noiceball=1

@@ -1,0 +1,7 @@
+gfxwidth=64
+gfxheight=64
+gfxsplitheight=768
+frames=12
+framestyle=0
+width=64
+height=64

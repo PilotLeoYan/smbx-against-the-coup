@@ -1,0 +1,5 @@
+nofireball=0
+noiceball=1
+health=1
+fireballdmg=1
+iceballdmg=1

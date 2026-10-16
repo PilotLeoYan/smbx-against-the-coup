@@ -1,0 +1,13 @@
+gfxwidth=64
+gfxheight=64
+framestyle=1
+noyoshi=1
+nopiercingdmg=1
+health=21
+fireballdmg=1
+jumpdmg=3
+hammerdmg=2
+sworddmg=3
+frozentime=33
+cliffturn=1
+scripts=##parabones

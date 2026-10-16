@@ -1,0 +1,7 @@
+gfxwidth=44
+gfxheight=32
+frames=6
+width=44
+height=32
+jumphurt=1
+nofireball=1

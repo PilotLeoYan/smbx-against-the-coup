@@ -1,0 +1,8 @@
+nogravity=1
+playerblock=0
+playerblocktop=1
+nohurt=1
+width=32
+npcblock=0
+noblockcollision=1
+scripts=npc79

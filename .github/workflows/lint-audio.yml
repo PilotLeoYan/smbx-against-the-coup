@@ -1,0 +1,43 @@
+name: Lint Audio Assets
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  lint-audio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Reject legacy audio formats (.wav, .mp3, .flac, .m4a)
+        run: |
+          python3 -c '
+          import os, sys
+
+          forbidden_exts = {".wav", ".mp3", ".flac", ".m4a"}
+          allowed_audio_exts = {".ogg", ".mid"}
+          forbidden_found = []
+          valid_audio_count = 0
+
+          for root, dirs, files in os.walk("."):
+              if ".git" in dirs:
+                  dirs.remove(".git")
+              for f in files:
+                  ext = os.path.splitext(f)[1].lower()
+                  if ext in forbidden_exts:
+                      forbidden_found.append(os.path.join(root, f))
+                  elif ext in allowed_audio_exts:
+                      valid_audio_count += 1
+
+          if forbidden_found:
+              print("Forbidden audio files detected (only .ogg and .mid are permitted):")
+              for item in sorted(forbidden_found):
+                  print(f"  - {item}")
+              sys.exit(1)
+
+          print(f"Audio check passed: {valid_audio_count} permitted audio files (.ogg/.mid), 0 forbidden files.")
+          '

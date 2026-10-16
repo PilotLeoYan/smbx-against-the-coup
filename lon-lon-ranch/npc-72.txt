@@ -1,0 +1,6 @@
+gfxheight=62
+height=62
+npcblock=0
+speed=0
+frames=1
+framestyle=1

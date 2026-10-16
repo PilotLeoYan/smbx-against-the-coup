@@ -1,0 +1,6 @@
+gfxsplitheight=288
+nofireball=1
+noiceball=0
+fireballdmg=1
+iceballdmg=1
+frozentime=1

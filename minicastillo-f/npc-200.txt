@@ -1,0 +1,3 @@
+health=10
+noiceball=1
+name="Bowser (SMB1)"

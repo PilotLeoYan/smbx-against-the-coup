@@ -1,0 +1,17 @@
+noblockcollision=1
+jumphurt=0
+shoehurt=1
+nohammer=0
+noiceball=0
+noleaf=0
+health=2
+fireballdmg=0
+jumpdmg=1
+hammerdmg=1
+shelldmg=1
+sworddmg=1
+lavadmg=1
+explosiondmg=1
+blockhitdmg=1
+tailspindmg=1
+scripts=red bulletbill

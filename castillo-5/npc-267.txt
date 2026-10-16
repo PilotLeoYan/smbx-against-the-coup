@@ -1,0 +1,12 @@
+gfxwidth=68
+gfxheight=60
+width=68
+height=60
+jumphurt=1
+nofireball=1
+noiceball=1
+health=15
+fireballdmg=3
+jumpdmg=5
+frozentime=-1
+scripts=larry

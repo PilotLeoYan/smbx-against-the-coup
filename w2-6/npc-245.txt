@@ -1,0 +1,5 @@
+fireballdmg=1
+hammerdmg=2
+shelldmg=2
+sworddmg=1
+tailspindmg=1

@@ -1,0 +1,3 @@
+health=3
+fireballdmg=1
+blockhitdmg=3

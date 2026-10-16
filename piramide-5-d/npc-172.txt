@@ -1,0 +1,2 @@
+spinjump=0
+blockhitdmg=0

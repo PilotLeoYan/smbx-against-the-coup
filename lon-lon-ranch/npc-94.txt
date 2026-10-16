@@ -1,0 +1,3 @@
+gfxheight=62
+height=62
+npcblock=0

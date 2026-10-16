@@ -1,0 +1,3 @@
+foreground=1
+playerblocktop=1
+width=32

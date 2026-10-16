@@ -1,0 +1,3 @@
+frames=4
+grabtop=1
+scripts=icebrick

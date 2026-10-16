@@ -1,0 +1,4 @@
+gfxwidth=40
+gfxheight=48
+frames=4
+noiceball=1

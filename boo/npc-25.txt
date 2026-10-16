@@ -1,0 +1,9 @@
+gfxwidth=30
+gfxheight=28
+frames=2
+framestyle=0
+width=30
+height=28
+playerblocktop=0
+jumphurt=1
+spinjump=1

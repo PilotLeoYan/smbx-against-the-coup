@@ -1,0 +1,4 @@
+health=3
+hammerdmg=1
+shelldmg=1
+explosiondmg=1

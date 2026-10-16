@@ -1,0 +1,8 @@
+nofireball=1
+fireballdmg=0
+sworddmg=7
+iceballdmg=10
+explosiondmg=7
+tailspindmg=5
+frozentime=1
+scripts=##boss

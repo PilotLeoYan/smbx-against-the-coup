@@ -1,0 +1,5 @@
+gfxsplitheight=128
+fireballdmg=1
+shelldmg=2
+sworddmg=1
+tailspindmg=1

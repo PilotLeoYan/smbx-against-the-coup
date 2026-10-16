@@ -1,0 +1,5 @@
+framestyle=3
+zposition=0.5
+nogravity=1
+nolava=1
+scripts=baseskewerh

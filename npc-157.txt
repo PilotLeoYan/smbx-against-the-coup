@@ -1,0 +1,3 @@
+gfxsplitheight=32
+noyoshi=1
+brightness=200

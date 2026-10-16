@@ -1,0 +1,7 @@
+health=5
+fireballdmg=1
+jumpdmg=3
+hammerdmg=3
+shelldmg=3
+sworddmg=3
+tailspindmg=3

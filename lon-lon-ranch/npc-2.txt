@@ -1,0 +1,7 @@
+width=30
+height=62
+gfxwidth=30
+gfxheight=62
+frames=2
+framestyle=1
+npcblock=0

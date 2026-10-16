@@ -1,0 +1,3 @@
+health=150
+fireballdmg=10
+hammerdmg=20

@@ -1,0 +1,11 @@
+zposition=0.2
+health=3
+shelldmg=1
+explosiondmg=3
+blockhitdmg=1
+npcblock=1
+npcblock1=1
+grabtop=0
+nopiercingdmg=0
+smallhitbox=1
+scripts=powsmm

@@ -1,0 +1,6 @@
+score=6
+yoshitransform=1000
+grabside=0
+grabtop=0
+nohammer=1
+noiceball=1

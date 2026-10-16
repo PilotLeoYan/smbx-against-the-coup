@@ -1,0 +1,4 @@
+iceballdmg=2
+frozentime=1
+nofireball=1
+noiceball=0

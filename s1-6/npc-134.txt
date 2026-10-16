@@ -1,0 +1,5 @@
+gfxwidth=60
+gfxheight=60
+gfxsplitheight=720
+width=48
+height=36

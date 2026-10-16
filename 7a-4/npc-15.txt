@@ -1,0 +1,2 @@
+gfxsplitheight=486
+health=15

@@ -1,0 +1,9 @@
+speed=1
+spinjump=0
+jumphurt=1
+nopiercingdmg=1
+health=2
+jumpdmg=0
+shelldmg=1
+blockhitdmg=1
+score=3

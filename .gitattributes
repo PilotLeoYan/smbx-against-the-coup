@@ -1,0 +1,9 @@
+*.lvl text eol=crlf
+*.wld text eol=crlf
+*.lvlx text eol=lf
+*.wldx text eol=lf
+*.txt text
+*.ini text
+*.png binary
+*.ogg binary
+*.mid binary

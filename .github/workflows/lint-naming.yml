@@ -1,0 +1,43 @@
+name: Lint File and Directory Naming
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  lint-naming:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Enforce strict lowercase and hyphenated naming (^[a-z0-9_.-]+$)
+        run: |
+          python3 -c '
+          import os, re, sys
+
+          pattern = re.compile(r"^[a-z0-9_.-]+$")
+          exempt = {"readme.md"}
+          violations = []
+
+          for root, dirs, files in os.walk("."):
+              if ".git" in dirs:
+                  dirs.remove(".git")
+              for d in dirs:
+                  if not pattern.match(d):
+                      violations.append(f"Directory: {os.path.join(root, d)}")
+              for f in files:
+                  if f.lower() in exempt and re.match(r"^[A-Za-z0-9_.-]+$", f):
+                      continue
+                  if not pattern.match(f):
+                      violations.append(f"File: {os.path.join(root, f)}")
+
+          if violations:
+              print("Naming convention violations found (must match ^[a-z0-9_.-]+$):")
+              for v in sorted(violations):
+                  print(f"  - {v}")
+              sys.exit(1)
+          print("All files and directories strictly adhere to naming standards.")
+          '
