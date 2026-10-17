@@ -8,6 +8,7 @@ on:
 
 jobs:
   lint-naming:
+    name: Lint File and Directory Naming
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
