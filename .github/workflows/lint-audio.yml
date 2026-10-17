@@ -8,6 +8,7 @@ on:
 
 jobs:
   lint-audio:
+    name: Lint Audio Assets
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
